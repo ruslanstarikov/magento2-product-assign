@@ -19,12 +19,6 @@
       "role": "Leader"
     }
   ],
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://Maxi07@bitbucket.org/triple888international/reindex.git"
-    }
-  ],
   "autoload": {
     "files": [
       "registration.php"
