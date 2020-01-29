@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="triple888_productassign" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product Assign</label>
+            <tab>ocd</tab>
+            <resource>Triple888_ProductAssign::triple888_productAssign_settings</resource>
+            <group id="assign" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Inserts</label>
+                <field id="skus" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Skus</label>
+                    <comment>Write the list of SKUs separated by comma</comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="categories" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Categories</label>
+                    <comment>Write the list of category IDs separated by comma</comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="includeConfigurable" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Configurable products</label>
+                    <comment>Include configurable products associated to each simple</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="schedule" translate="label" type="text" sortOrder="2" showInDefault="1">
+                    <label>Schedule</label>
+                    <comment><![CDATA[
+                            <pre>
+                            * * * * *
+                            | | | | |
+                            | | | | +---- Day of the Week   (range: 1-7, 1 standing for Monday)
+                            | | | +------ Month of the Year (range: 1-12)
+                            | | +-------- Day of the Month  (range: 1-31)
+                            | +---------- Hour              (range: 0-23)
+                            +------------ Minute            (range: 0-59)
+                            Example: 0 0 * * * Daily at midnight
+                            </pre>
+                            ]]></comment>
+                </field>
+                <field id="assign" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <button_label>Button</button_label>
+                    <frontend_model>Triple888\ProductAssign\Block\Adminhtml\Config\Assign</frontend_model>
+                </field>
+            </group>
+            <group id="delete" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Deletes</label>
+                <field id="skus" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Skus</label>
+                    <comment>Write the list of SKUs separated by comma</comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="categories" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Categories</label>
+                    <comment>Write the list of category IDs separated by comma</comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="includeConfigurable" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Configurable products</label>
+                    <comment>Include configurable products associated to each simple</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="schedule" translate="label" type="text" sortOrder="2" showInDefault="1">
+                    <label>Schedule</label>
+                    <comment><![CDATA[
+                            <pre>
+                            * * * * *
+                            | | | | |
+                            | | | | +---- Day of the Week   (range: 1-7, 1 standing for Monday)
+                            | | | +------ Month of the Year (range: 1-12)
+                            | | +-------- Day of the Month  (range: 1-31)
+                            | +---------- Hour              (range: 0-23)
+                            +------------ Minute            (range: 0-59)
+                            Example: 0 0 * * * Daily at midnight
+                            </pre>
+                            ]]></comment>
+                </field>
+                <field id="remove" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <button_label>Button</button_label>
+                    <frontend_model>Triple888\ProductAssign\Block\Adminhtml\Config\Remove</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,36 @@
+{
+  "name": "triple888/product-assign",
+  "description": "Assign and remove products to categories",
+  "require": {
+    "php": "~7.0",
+    "triple888/reindex": "dev-master"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "Triple 888 Studio",
+      "email": "maxc@triple888.com.au",
+      "homepage": "http://www.triple888international.com",
+      "role": "Leader"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://Maxi07@bitbucket.org/triple888international/reindex.git"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Triple888\\ProductAssign\\": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="triple888">
+        <job name="product_category_assign" instance="Triple888\ProductAssign\Cron\Insert" method="execute">
+            <config_path>triple888_productassign/assign/schedule</config_path>
+        </job>
+        <job name="product_category_remove" instance="Triple888\ProductAssign\Cron\Remove" method="execute">
+            <config_path>triple888_productassign/delete/schedule</config_path>
+        </job>
+    </group>
+</config>
