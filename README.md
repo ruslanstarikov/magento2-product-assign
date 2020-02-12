@@ -8,4 +8,10 @@ Example
 Technical:
     Reason why I didn't abstract 'Run' Controller together, it was because I choose flexibility instead abstraction. 
      
+Versions:
+    
+    1.0.0: initial module
+    
+    1.0.1: it has re-written the entire insert functionality avoiding use Magento assignProduct 
+        which it was deleting the previous association.
     
